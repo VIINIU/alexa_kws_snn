@@ -1,0 +1,7 @@
+Time resolution is 1 ps
+=== [Debug Simulation Start] ===
+>> Sending Start Command (0xAA)
+>> Sending Step 1 Data (All 1s: 0xFF, 0xFF, 0x0F)
+>> Waiting for computation...
+=== [Simulation End] Check Waveform! ===
+$finish called at time : 690600 ns : File "C:/vini_dir/vini_snn/vini_snn.srcs/sim_1/new/tb_snn_debug.v" Line 93

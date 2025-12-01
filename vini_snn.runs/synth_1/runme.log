@@ -1,0 +1,716 @@
+
+*** Running vivado
+    with args -log top_snn.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source top_snn.tcl
+
+
+
+****** Vivado v2024.2 (64-bit)
+  **** SW Build 5239630 on Fri Nov 08 22:35:27 MST 2024
+  **** IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+  **** SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+  **** Start of session at: Mon Dec  1 12:26:34 2025
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source top_snn.tcl -notrace
+Command: read_checkpoint -auto_incremental -incremental C:/vini_dir/vini_snn/vini_snn.srcs/utils_1/imports/synth_1/top_snn.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from C:/vini_dir/vini_snn/vini_snn.srcs/utils_1/imports/synth_1/top_snn.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top top_snn -part xc7a100tcsg324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 24764
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1058.820 ; gain = 468.488
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'top_snn' [C:/vini_dir/vini_snn/vini_snn.srcs/sources_1/new/top_snn.v:3]
+INFO: [Synth 8-6157] synthesizing module 'clk_wiz_0' [C:/vini_dir/vini_snn/vini_snn.runs/synth_1/.Xil/Vivado-26832-VINIBOOK/realtime/clk_wiz_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_0' (0#1) [C:/vini_dir/vini_snn/vini_snn.runs/synth_1/.Xil/Vivado-26832-VINIBOOK/realtime/clk_wiz_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'uart_rx' [C:/vini_dir/Keyword_Spotter/Keyword_Spotter.srcs/sources_1/new/uart_rx1.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'uart_rx' (0#1) [C:/vini_dir/Keyword_Spotter/Keyword_Spotter.srcs/sources_1/new/uart_rx1.v:2]
+INFO: [Synth 8-6157] synthesizing module 'uart_tx' [C:/vini_dir/Keyword_Spotter/Keyword_Spotter.srcs/sources_1/new/uart_tx1.v:2]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/vini_dir/Keyword_Spotter/Keyword_Spotter.srcs/sources_1/new/uart_tx1.v:30]
+INFO: [Synth 8-6155] done synthesizing module 'uart_tx' (0#1) [C:/vini_dir/Keyword_Spotter/Keyword_Spotter.srcs/sources_1/new/uart_tx1.v:2]
+INFO: [Synth 8-6157] synthesizing module 'snn_core' [C:/vini_dir/vini_snn/vini_snn.srcs/sources_1/new/snn_core.v:15]
+INFO: [Synth 8-6157] synthesizing module 'snn_layer' [C:/vini_dir/vini_snn/vini_snn.srcs/sources_1/new/snn_layer.v:7]
+	Parameter INPUT_DIM bound to: 20 - type: integer 
+	Parameter NUM_NEURONS bound to: 128 - type: integer 
+	Parameter J_WIDTH bound to: 7 - type: integer 
+	Parameter W_ADDR_WIDTH bound to: 12 - type: integer 
+	Parameter B_ADDR_WIDTH bound to: 7 - type: integer 
+	Parameter W_MEM_FILE bound to: W1.mem - type: string 
+	Parameter B_MEM_FILE bound to: B1.mem - type: string 
+	Parameter LAYER_ID bound to: 1 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'generic_rom' [C:/vini_dir/vini_snn/vini_snn.srcs/sources_1/new/generic_rom.v:23]
+	Parameter ADDR_WIDTH bound to: 12 - type: integer 
+	Parameter INIT_FILE bound to: W1.mem - type: string 
+INFO: [Synth 8-3876] $readmem data file 'W1.mem' is read successfully [C:/vini_dir/vini_snn/vini_snn.srcs/sources_1/new/generic_rom.v:38]
+INFO: [Synth 8-6155] done synthesizing module 'generic_rom' (0#1) [C:/vini_dir/vini_snn/vini_snn.srcs/sources_1/new/generic_rom.v:23]
+INFO: [Synth 8-6157] synthesizing module 'generic_rom__parameterized0' [C:/vini_dir/vini_snn/vini_snn.srcs/sources_1/new/generic_rom.v:23]
+	Parameter ADDR_WIDTH bound to: 7 - type: integer 
+	Parameter INIT_FILE bound to: B1.mem - type: string 
+INFO: [Synth 8-3876] $readmem data file 'B1.mem' is read successfully [C:/vini_dir/vini_snn/vini_snn.srcs/sources_1/new/generic_rom.v:38]
+INFO: [Synth 8-6155] done synthesizing module 'generic_rom__parameterized0' (0#1) [C:/vini_dir/vini_snn/vini_snn.srcs/sources_1/new/generic_rom.v:23]
+INFO: [Synth 8-6157] synthesizing module 'mac_unit' [C:/vini_dir/vini_snn/vini_snn.srcs/sources_1/new/mac_unit.v:3]
+	Parameter INPUT_DIM bound to: 20 - type: integer 
+	Parameter J_WIDTH bound to: 7 - type: integer 
+	Parameter W_ADDR_WIDTH bound to: 12 - type: integer 
+	Parameter B_ADDR_WIDTH bound to: 7 - type: integer 
+INFO: [Synth 8-226] default block is never used [C:/vini_dir/vini_snn/vini_snn.srcs/sources_1/new/mac_unit.v:76]
+INFO: [Synth 8-6155] done synthesizing module 'mac_unit' (0#1) [C:/vini_dir/vini_snn/vini_snn.srcs/sources_1/new/mac_unit.v:3]
+INFO: [Synth 8-6157] synthesizing module 'lif_neuron' [C:/vini_dir/vini_snn/vini_snn.srcs/sources_1/new/lif_neuron.v:8]
+	Parameter BETA_Q0_16 bound to: 16'b1111001100110011 
+	Parameter THRESHOLD_Q5_11 bound to: 16'sb0000010000000000 
+INFO: [Synth 8-226] default block is never used [C:/vini_dir/vini_snn/vini_snn.srcs/sources_1/new/lif_neuron.v:107]
+INFO: [Synth 8-6155] done synthesizing module 'lif_neuron' (0#1) [C:/vini_dir/vini_snn/vini_snn.srcs/sources_1/new/lif_neuron.v:8]
+INFO: [Synth 8-6155] done synthesizing module 'snn_layer' (0#1) [C:/vini_dir/vini_snn/vini_snn.srcs/sources_1/new/snn_layer.v:7]
+INFO: [Synth 8-6157] synthesizing module 'snn_layer__parameterized0' [C:/vini_dir/vini_snn/vini_snn.srcs/sources_1/new/snn_layer.v:7]
+	Parameter INPUT_DIM bound to: 128 - type: integer 
+	Parameter NUM_NEURONS bound to: 128 - type: integer 
+	Parameter J_WIDTH bound to: 7 - type: integer 
+	Parameter W_ADDR_WIDTH bound to: 14 - type: integer 
+	Parameter B_ADDR_WIDTH bound to: 7 - type: integer 
+	Parameter W_MEM_FILE bound to: W2.mem - type: string 
+	Parameter B_MEM_FILE bound to: B2.mem - type: string 
+	Parameter LAYER_ID bound to: 2 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'generic_rom__parameterized1' [C:/vini_dir/vini_snn/vini_snn.srcs/sources_1/new/generic_rom.v:23]
+	Parameter ADDR_WIDTH bound to: 14 - type: integer 
+	Parameter INIT_FILE bound to: W2.mem - type: string 
+INFO: [Synth 8-3876] $readmem data file 'W2.mem' is read successfully [C:/vini_dir/vini_snn/vini_snn.srcs/sources_1/new/generic_rom.v:38]
+INFO: [Synth 8-6155] done synthesizing module 'generic_rom__parameterized1' (0#1) [C:/vini_dir/vini_snn/vini_snn.srcs/sources_1/new/generic_rom.v:23]
+INFO: [Synth 8-6157] synthesizing module 'generic_rom__parameterized2' [C:/vini_dir/vini_snn/vini_snn.srcs/sources_1/new/generic_rom.v:23]
+	Parameter ADDR_WIDTH bound to: 7 - type: integer 
+	Parameter INIT_FILE bound to: B2.mem - type: string 
+INFO: [Synth 8-3876] $readmem data file 'B2.mem' is read successfully [C:/vini_dir/vini_snn/vini_snn.srcs/sources_1/new/generic_rom.v:38]
+INFO: [Synth 8-6155] done synthesizing module 'generic_rom__parameterized2' (0#1) [C:/vini_dir/vini_snn/vini_snn.srcs/sources_1/new/generic_rom.v:23]
+INFO: [Synth 8-6157] synthesizing module 'mac_unit__parameterized0' [C:/vini_dir/vini_snn/vini_snn.srcs/sources_1/new/mac_unit.v:3]
+	Parameter INPUT_DIM bound to: 128 - type: integer 
+	Parameter J_WIDTH bound to: 7 - type: integer 
+	Parameter W_ADDR_WIDTH bound to: 14 - type: integer 
+	Parameter B_ADDR_WIDTH bound to: 7 - type: integer 
+INFO: [Synth 8-226] default block is never used [C:/vini_dir/vini_snn/vini_snn.srcs/sources_1/new/mac_unit.v:76]
+INFO: [Synth 8-6155] done synthesizing module 'mac_unit__parameterized0' (0#1) [C:/vini_dir/vini_snn/vini_snn.srcs/sources_1/new/mac_unit.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'snn_layer__parameterized0' (0#1) [C:/vini_dir/vini_snn/vini_snn.srcs/sources_1/new/snn_layer.v:7]
+INFO: [Synth 8-6157] synthesizing module 'snn_layer__parameterized1' [C:/vini_dir/vini_snn/vini_snn.srcs/sources_1/new/snn_layer.v:7]
+	Parameter INPUT_DIM bound to: 128 - type: integer 
+	Parameter NUM_NEURONS bound to: 2 - type: integer 
+	Parameter J_WIDTH bound to: 1 - type: integer 
+	Parameter W_ADDR_WIDTH bound to: 8 - type: integer 
+	Parameter B_ADDR_WIDTH bound to: 1 - type: integer 
+	Parameter W_MEM_FILE bound to: W3.mem - type: string 
+	Parameter B_MEM_FILE bound to: B3.mem - type: string 
+	Parameter LAYER_ID bound to: 3 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'generic_rom__parameterized3' [C:/vini_dir/vini_snn/vini_snn.srcs/sources_1/new/generic_rom.v:23]
+	Parameter ADDR_WIDTH bound to: 8 - type: integer 
+	Parameter INIT_FILE bound to: W3.mem - type: string 
+INFO: [Synth 8-3876] $readmem data file 'W3.mem' is read successfully [C:/vini_dir/vini_snn/vini_snn.srcs/sources_1/new/generic_rom.v:38]
+INFO: [Synth 8-6155] done synthesizing module 'generic_rom__parameterized3' (0#1) [C:/vini_dir/vini_snn/vini_snn.srcs/sources_1/new/generic_rom.v:23]
+INFO: [Synth 8-6157] synthesizing module 'generic_rom__parameterized4' [C:/vini_dir/vini_snn/vini_snn.srcs/sources_1/new/generic_rom.v:23]
+	Parameter ADDR_WIDTH bound to: 1 - type: integer 
+	Parameter INIT_FILE bound to: B3.mem - type: string 
+INFO: [Synth 8-3876] $readmem data file 'B3.mem' is read successfully [C:/vini_dir/vini_snn/vini_snn.srcs/sources_1/new/generic_rom.v:38]
+INFO: [Synth 8-6155] done synthesizing module 'generic_rom__parameterized4' (0#1) [C:/vini_dir/vini_snn/vini_snn.srcs/sources_1/new/generic_rom.v:23]
+INFO: [Synth 8-6157] synthesizing module 'mac_unit__parameterized1' [C:/vini_dir/vini_snn/vini_snn.srcs/sources_1/new/mac_unit.v:3]
+	Parameter INPUT_DIM bound to: 128 - type: integer 
+	Parameter J_WIDTH bound to: 1 - type: integer 
+	Parameter W_ADDR_WIDTH bound to: 8 - type: integer 
+	Parameter B_ADDR_WIDTH bound to: 1 - type: integer 
+INFO: [Synth 8-226] default block is never used [C:/vini_dir/vini_snn/vini_snn.srcs/sources_1/new/mac_unit.v:76]
+INFO: [Synth 8-6155] done synthesizing module 'mac_unit__parameterized1' (0#1) [C:/vini_dir/vini_snn/vini_snn.srcs/sources_1/new/mac_unit.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'snn_layer__parameterized1' (0#1) [C:/vini_dir/vini_snn/vini_snn.srcs/sources_1/new/snn_layer.v:7]
+INFO: [Synth 8-6155] done synthesizing module 'snn_core' (0#1) [C:/vini_dir/vini_snn/vini_snn.srcs/sources_1/new/snn_core.v:15]
+INFO: [Synth 8-6155] done synthesizing module 'top_snn' (0#1) [C:/vini_dir/vini_snn/vini_snn.srcs/sources_1/new/top_snn.v:3]
+WARNING: [Synth 8-7137] Register mem_data_from_bram_reg in module snn_layer has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/vini_dir/vini_snn/vini_snn.srcs/sources_1/new/snn_layer.v:88]
+WARNING: [Synth 8-7137] Register mem_potential_bram_reg[0] in module snn_layer has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/vini_dir/vini_snn/vini_snn.srcs/sources_1/new/snn_layer.v:106]
+WARNING: [Synth 8-7137] Register mem_potential_bram_reg[1] in module snn_layer has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/vini_dir/vini_snn/vini_snn.srcs/sources_1/new/snn_layer.v:106]
+WARNING: [Synth 8-7137] Register mem_potential_bram_reg[2] in module snn_layer has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/vini_dir/vini_snn/vini_snn.srcs/sources_1/new/snn_layer.v:106]
+WARNING: [Synth 8-7137] Register mem_potential_bram_reg[3] in module snn_layer has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/vini_dir/vini_snn/vini_snn.srcs/sources_1/new/snn_layer.v:106]
+WARNING: [Synth 8-7137] Register mem_potential_bram_reg[4] in module snn_layer has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/vini_dir/vini_snn/vini_snn.srcs/sources_1/new/snn_layer.v:106]
+WARNING: [Synth 8-7137] Register mem_potential_bram_reg[5] in module snn_layer has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/vini_dir/vini_snn/vini_snn.srcs/sources_1/new/snn_layer.v:106]
+WARNING: [Synth 8-7137] Register mem_potential_bram_reg[6] in module snn_layer has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/vini_dir/vini_snn/vini_snn.srcs/sources_1/new/snn_layer.v:106]
+WARNING: [Synth 8-7137] Register mem_potential_bram_reg[7] in module snn_layer has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/vini_dir/vini_snn/vini_snn.srcs/sources_1/new/snn_layer.v:106]
+WARNING: [Synth 8-7137] Register mem_potential_bram_reg[8] in module snn_layer has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/vini_dir/vini_snn/vini_snn.srcs/sources_1/new/snn_layer.v:106]
+WARNING: [Synth 8-7137] Register mem_potential_bram_reg[9] in module snn_layer has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/vini_dir/vini_snn/vini_snn.srcs/sources_1/new/snn_layer.v:106]
+WARNING: [Synth 8-7137] Register mem_potential_bram_reg[10] in module snn_layer has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/vini_dir/vini_snn/vini_snn.srcs/sources_1/new/snn_layer.v:106]
+WARNING: [Synth 8-7137] Register mem_potential_bram_reg[11] in module snn_layer has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/vini_dir/vini_snn/vini_snn.srcs/sources_1/new/snn_layer.v:106]
+WARNING: [Synth 8-7137] Register mem_potential_bram_reg[12] in module snn_layer has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/vini_dir/vini_snn/vini_snn.srcs/sources_1/new/snn_layer.v:106]
+WARNING: [Synth 8-7137] Register mem_potential_bram_reg[13] in module snn_layer has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/vini_dir/vini_snn/vini_snn.srcs/sources_1/new/snn_layer.v:106]
+WARNING: [Synth 8-7137] Register mem_potential_bram_reg[14] in module snn_layer has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/vini_dir/vini_snn/vini_snn.srcs/sources_1/new/snn_layer.v:106]
+WARNING: [Synth 8-7137] Register mem_potential_bram_reg[15] in module snn_layer has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/vini_dir/vini_snn/vini_snn.srcs/sources_1/new/snn_layer.v:106]
+WARNING: [Synth 8-7137] Register mem_potential_bram_reg[16] in module snn_layer has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/vini_dir/vini_snn/vini_snn.srcs/sources_1/new/snn_layer.v:106]
+WARNING: [Synth 8-7137] Register mem_potential_bram_reg[17] in module snn_layer has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/vini_dir/vini_snn/vini_snn.srcs/sources_1/new/snn_layer.v:106]
+WARNING: [Synth 8-7137] Register mem_potential_bram_reg[18] in module snn_layer has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/vini_dir/vini_snn/vini_snn.srcs/sources_1/new/snn_layer.v:106]
+WARNING: [Synth 8-7137] Register mem_potential_bram_reg[19] in module snn_layer has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/vini_dir/vini_snn/vini_snn.srcs/sources_1/new/snn_layer.v:106]
+WARNING: [Synth 8-7137] Register mem_potential_bram_reg[20] in module snn_layer has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/vini_dir/vini_snn/vini_snn.srcs/sources_1/new/snn_layer.v:106]
+WARNING: [Synth 8-7137] Register mem_potential_bram_reg[21] in module snn_layer has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/vini_dir/vini_snn/vini_snn.srcs/sources_1/new/snn_layer.v:106]
+WARNING: [Synth 8-7137] Register mem_potential_bram_reg[22] in module snn_layer has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/vini_dir/vini_snn/vini_snn.srcs/sources_1/new/snn_layer.v:106]
+WARNING: [Synth 8-7137] Register mem_potential_bram_reg[23] in module snn_layer has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/vini_dir/vini_snn/vini_snn.srcs/sources_1/new/snn_layer.v:106]
+WARNING: [Synth 8-7137] Register mem_potential_bram_reg[24] in module snn_layer has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/vini_dir/vini_snn/vini_snn.srcs/sources_1/new/snn_layer.v:106]
+WARNING: [Synth 8-7137] Register mem_potential_bram_reg[25] in module snn_layer has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/vini_dir/vini_snn/vini_snn.srcs/sources_1/new/snn_layer.v:106]
+WARNING: [Synth 8-7137] Register mem_potential_bram_reg[26] in module snn_layer has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/vini_dir/vini_snn/vini_snn.srcs/sources_1/new/snn_layer.v:106]
+WARNING: [Synth 8-7137] Register mem_potential_bram_reg[27] in module snn_layer has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/vini_dir/vini_snn/vini_snn.srcs/sources_1/new/snn_layer.v:106]
+WARNING: [Synth 8-7137] Register mem_potential_bram_reg[28] in module snn_layer has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/vini_dir/vini_snn/vini_snn.srcs/sources_1/new/snn_layer.v:106]
+WARNING: [Synth 8-7137] Register mem_potential_bram_reg[29] in module snn_layer has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/vini_dir/vini_snn/vini_snn.srcs/sources_1/new/snn_layer.v:106]
+WARNING: [Synth 8-7137] Register mem_potential_bram_reg[30] in module snn_layer has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/vini_dir/vini_snn/vini_snn.srcs/sources_1/new/snn_layer.v:106]
+WARNING: [Synth 8-7137] Register mem_potential_bram_reg[31] in module snn_layer has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/vini_dir/vini_snn/vini_snn.srcs/sources_1/new/snn_layer.v:106]
+WARNING: [Synth 8-7137] Register mem_potential_bram_reg[32] in module snn_layer has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/vini_dir/vini_snn/vini_snn.srcs/sources_1/new/snn_layer.v:106]
+WARNING: [Synth 8-7137] Register mem_potential_bram_reg[33] in module snn_layer has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/vini_dir/vini_snn/vini_snn.srcs/sources_1/new/snn_layer.v:106]
+WARNING: [Synth 8-7137] Register mem_potential_bram_reg[34] in module snn_layer has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/vini_dir/vini_snn/vini_snn.srcs/sources_1/new/snn_layer.v:106]
+WARNING: [Synth 8-7137] Register mem_potential_bram_reg[35] in module snn_layer has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/vini_dir/vini_snn/vini_snn.srcs/sources_1/new/snn_layer.v:106]
+WARNING: [Synth 8-7137] Register mem_potential_bram_reg[36] in module snn_layer has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/vini_dir/vini_snn/vini_snn.srcs/sources_1/new/snn_layer.v:106]
+WARNING: [Synth 8-7137] Register mem_potential_bram_reg[37] in module snn_layer has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/vini_dir/vini_snn/vini_snn.srcs/sources_1/new/snn_layer.v:106]
+WARNING: [Synth 8-7137] Register mem_potential_bram_reg[38] in module snn_layer has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/vini_dir/vini_snn/vini_snn.srcs/sources_1/new/snn_layer.v:106]
+WARNING: [Synth 8-7137] Register mem_potential_bram_reg[39] in module snn_layer has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/vini_dir/vini_snn/vini_snn.srcs/sources_1/new/snn_layer.v:106]
+WARNING: [Synth 8-7137] Register mem_potential_bram_reg[40] in module snn_layer has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/vini_dir/vini_snn/vini_snn.srcs/sources_1/new/snn_layer.v:106]
+WARNING: [Synth 8-7137] Register mem_potential_bram_reg[41] in module snn_layer has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/vini_dir/vini_snn/vini_snn.srcs/sources_1/new/snn_layer.v:106]
+WARNING: [Synth 8-7137] Register mem_potential_bram_reg[42] in module snn_layer has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/vini_dir/vini_snn/vini_snn.srcs/sources_1/new/snn_layer.v:106]
+WARNING: [Synth 8-7137] Register mem_potential_bram_reg[43] in module snn_layer has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/vini_dir/vini_snn/vini_snn.srcs/sources_1/new/snn_layer.v:106]
+WARNING: [Synth 8-7137] Register mem_potential_bram_reg[44] in module snn_layer has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/vini_dir/vini_snn/vini_snn.srcs/sources_1/new/snn_layer.v:106]
+WARNING: [Synth 8-7137] Register mem_potential_bram_reg[45] in module snn_layer has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/vini_dir/vini_snn/vini_snn.srcs/sources_1/new/snn_layer.v:106]
+WARNING: [Synth 8-7137] Register mem_potential_bram_reg[46] in module snn_layer has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/vini_dir/vini_snn/vini_snn.srcs/sources_1/new/snn_layer.v:106]
+WARNING: [Synth 8-7137] Register mem_potential_bram_reg[47] in module snn_layer has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/vini_dir/vini_snn/vini_snn.srcs/sources_1/new/snn_layer.v:106]
+WARNING: [Synth 8-7137] Register mem_potential_bram_reg[48] in module snn_layer has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/vini_dir/vini_snn/vini_snn.srcs/sources_1/new/snn_layer.v:106]
+WARNING: [Synth 8-7137] Register mem_potential_bram_reg[49] in module snn_layer has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/vini_dir/vini_snn/vini_snn.srcs/sources_1/new/snn_layer.v:106]
+WARNING: [Synth 8-7137] Register mem_potential_bram_reg[50] in module snn_layer has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/vini_dir/vini_snn/vini_snn.srcs/sources_1/new/snn_layer.v:106]
+WARNING: [Synth 8-7137] Register mem_potential_bram_reg[51] in module snn_layer has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/vini_dir/vini_snn/vini_snn.srcs/sources_1/new/snn_layer.v:106]
+WARNING: [Synth 8-7137] Register mem_potential_bram_reg[52] in module snn_layer has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/vini_dir/vini_snn/vini_snn.srcs/sources_1/new/snn_layer.v:106]
+WARNING: [Synth 8-7137] Register mem_potential_bram_reg[53] in module snn_layer has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/vini_dir/vini_snn/vini_snn.srcs/sources_1/new/snn_layer.v:106]
+WARNING: [Synth 8-7137] Register mem_potential_bram_reg[54] in module snn_layer has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/vini_dir/vini_snn/vini_snn.srcs/sources_1/new/snn_layer.v:106]
+WARNING: [Synth 8-7137] Register mem_potential_bram_reg[55] in module snn_layer has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/vini_dir/vini_snn/vini_snn.srcs/sources_1/new/snn_layer.v:106]
+WARNING: [Synth 8-7137] Register mem_potential_bram_reg[56] in module snn_layer has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/vini_dir/vini_snn/vini_snn.srcs/sources_1/new/snn_layer.v:106]
+WARNING: [Synth 8-7137] Register mem_potential_bram_reg[57] in module snn_layer has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/vini_dir/vini_snn/vini_snn.srcs/sources_1/new/snn_layer.v:106]
+WARNING: [Synth 8-7137] Register mem_potential_bram_reg[58] in module snn_layer has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/vini_dir/vini_snn/vini_snn.srcs/sources_1/new/snn_layer.v:106]
+WARNING: [Synth 8-7137] Register mem_potential_bram_reg[59] in module snn_layer has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/vini_dir/vini_snn/vini_snn.srcs/sources_1/new/snn_layer.v:106]
+WARNING: [Synth 8-7137] Register mem_potential_bram_reg[60] in module snn_layer has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/vini_dir/vini_snn/vini_snn.srcs/sources_1/new/snn_layer.v:106]
+WARNING: [Synth 8-7137] Register mem_potential_bram_reg[61] in module snn_layer has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/vini_dir/vini_snn/vini_snn.srcs/sources_1/new/snn_layer.v:106]
+WARNING: [Synth 8-7137] Register mem_potential_bram_reg[62] in module snn_layer has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/vini_dir/vini_snn/vini_snn.srcs/sources_1/new/snn_layer.v:106]
+WARNING: [Synth 8-7137] Register mem_potential_bram_reg[63] in module snn_layer has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/vini_dir/vini_snn/vini_snn.srcs/sources_1/new/snn_layer.v:106]
+WARNING: [Synth 8-7137] Register mem_potential_bram_reg[64] in module snn_layer has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/vini_dir/vini_snn/vini_snn.srcs/sources_1/new/snn_layer.v:106]
+WARNING: [Synth 8-7137] Register mem_potential_bram_reg[65] in module snn_layer has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/vini_dir/vini_snn/vini_snn.srcs/sources_1/new/snn_layer.v:106]
+WARNING: [Synth 8-7137] Register mem_potential_bram_reg[66] in module snn_layer has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/vini_dir/vini_snn/vini_snn.srcs/sources_1/new/snn_layer.v:106]
+WARNING: [Synth 8-7137] Register mem_potential_bram_reg[67] in module snn_layer has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/vini_dir/vini_snn/vini_snn.srcs/sources_1/new/snn_layer.v:106]
+WARNING: [Synth 8-7137] Register mem_potential_bram_reg[68] in module snn_layer has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/vini_dir/vini_snn/vini_snn.srcs/sources_1/new/snn_layer.v:106]
+WARNING: [Synth 8-7137] Register mem_potential_bram_reg[69] in module snn_layer has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/vini_dir/vini_snn/vini_snn.srcs/sources_1/new/snn_layer.v:106]
+WARNING: [Synth 8-7137] Register mem_potential_bram_reg[70] in module snn_layer has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/vini_dir/vini_snn/vini_snn.srcs/sources_1/new/snn_layer.v:106]
+WARNING: [Synth 8-7137] Register mem_potential_bram_reg[71] in module snn_layer has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/vini_dir/vini_snn/vini_snn.srcs/sources_1/new/snn_layer.v:106]
+WARNING: [Synth 8-7137] Register mem_potential_bram_reg[72] in module snn_layer has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/vini_dir/vini_snn/vini_snn.srcs/sources_1/new/snn_layer.v:106]
+WARNING: [Synth 8-7137] Register mem_potential_bram_reg[73] in module snn_layer has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/vini_dir/vini_snn/vini_snn.srcs/sources_1/new/snn_layer.v:106]
+WARNING: [Synth 8-7137] Register mem_potential_bram_reg[74] in module snn_layer has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/vini_dir/vini_snn/vini_snn.srcs/sources_1/new/snn_layer.v:106]
+WARNING: [Synth 8-7137] Register mem_potential_bram_reg[75] in module snn_layer has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/vini_dir/vini_snn/vini_snn.srcs/sources_1/new/snn_layer.v:106]
+WARNING: [Synth 8-7137] Register mem_potential_bram_reg[76] in module snn_layer has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/vini_dir/vini_snn/vini_snn.srcs/sources_1/new/snn_layer.v:106]
+WARNING: [Synth 8-7137] Register mem_potential_bram_reg[77] in module snn_layer has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/vini_dir/vini_snn/vini_snn.srcs/sources_1/new/snn_layer.v:106]
+WARNING: [Synth 8-7137] Register mem_potential_bram_reg[78] in module snn_layer has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/vini_dir/vini_snn/vini_snn.srcs/sources_1/new/snn_layer.v:106]
+WARNING: [Synth 8-7137] Register mem_potential_bram_reg[79] in module snn_layer has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/vini_dir/vini_snn/vini_snn.srcs/sources_1/new/snn_layer.v:106]
+WARNING: [Synth 8-7137] Register mem_potential_bram_reg[80] in module snn_layer has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/vini_dir/vini_snn/vini_snn.srcs/sources_1/new/snn_layer.v:106]
+WARNING: [Synth 8-7137] Register mem_potential_bram_reg[81] in module snn_layer has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/vini_dir/vini_snn/vini_snn.srcs/sources_1/new/snn_layer.v:106]
+WARNING: [Synth 8-7137] Register mem_potential_bram_reg[82] in module snn_layer has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/vini_dir/vini_snn/vini_snn.srcs/sources_1/new/snn_layer.v:106]
+WARNING: [Synth 8-7137] Register mem_potential_bram_reg[83] in module snn_layer has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/vini_dir/vini_snn/vini_snn.srcs/sources_1/new/snn_layer.v:106]
+WARNING: [Synth 8-7137] Register mem_potential_bram_reg[84] in module snn_layer has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/vini_dir/vini_snn/vini_snn.srcs/sources_1/new/snn_layer.v:106]
+WARNING: [Synth 8-7137] Register mem_potential_bram_reg[85] in module snn_layer has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/vini_dir/vini_snn/vini_snn.srcs/sources_1/new/snn_layer.v:106]
+WARNING: [Synth 8-7137] Register mem_potential_bram_reg[86] in module snn_layer has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/vini_dir/vini_snn/vini_snn.srcs/sources_1/new/snn_layer.v:106]
+WARNING: [Synth 8-7137] Register mem_potential_bram_reg[87] in module snn_layer has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/vini_dir/vini_snn/vini_snn.srcs/sources_1/new/snn_layer.v:106]
+WARNING: [Synth 8-7137] Register mem_potential_bram_reg[88] in module snn_layer has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/vini_dir/vini_snn/vini_snn.srcs/sources_1/new/snn_layer.v:106]
+WARNING: [Synth 8-7137] Register mem_potential_bram_reg[89] in module snn_layer has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/vini_dir/vini_snn/vini_snn.srcs/sources_1/new/snn_layer.v:106]
+WARNING: [Synth 8-7137] Register mem_potential_bram_reg[90] in module snn_layer has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/vini_dir/vini_snn/vini_snn.srcs/sources_1/new/snn_layer.v:106]
+WARNING: [Synth 8-7137] Register mem_potential_bram_reg[91] in module snn_layer has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/vini_dir/vini_snn/vini_snn.srcs/sources_1/new/snn_layer.v:106]
+WARNING: [Synth 8-7137] Register mem_potential_bram_reg[92] in module snn_layer has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/vini_dir/vini_snn/vini_snn.srcs/sources_1/new/snn_layer.v:106]
+WARNING: [Synth 8-7137] Register mem_potential_bram_reg[93] in module snn_layer has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/vini_dir/vini_snn/vini_snn.srcs/sources_1/new/snn_layer.v:106]
+WARNING: [Synth 8-7137] Register mem_potential_bram_reg[94] in module snn_layer has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/vini_dir/vini_snn/vini_snn.srcs/sources_1/new/snn_layer.v:106]
+WARNING: [Synth 8-7137] Register mem_potential_bram_reg[95] in module snn_layer has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/vini_dir/vini_snn/vini_snn.srcs/sources_1/new/snn_layer.v:106]
+WARNING: [Synth 8-7137] Register mem_potential_bram_reg[96] in module snn_layer has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/vini_dir/vini_snn/vini_snn.srcs/sources_1/new/snn_layer.v:106]
+WARNING: [Synth 8-7137] Register mem_potential_bram_reg[97] in module snn_layer has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/vini_dir/vini_snn/vini_snn.srcs/sources_1/new/snn_layer.v:106]
+WARNING: [Synth 8-7137] Register mem_potential_bram_reg[98] in module snn_layer has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/vini_dir/vini_snn/vini_snn.srcs/sources_1/new/snn_layer.v:106]
+INFO: [Common 17-14] Message 'Synth 8-7137' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1452.164 ; gain = 861.832
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1452.164 ; gain = 861.832
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1452.164 ; gain = 861.832
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.916 . Memory (MB): peak = 1452.164 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/vini_dir/vini_snn/vini_snn.gen/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc] for cell 'u_clk_wiz'
+Finished Parsing XDC File [c:/vini_dir/vini_snn/vini_snn.gen/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc] for cell 'u_clk_wiz'
+Parsing XDC File [C:/vini_dir/vini_snn/vini_snn.srcs/constrs_1/new/vini_snn.xdc]
+Finished Parsing XDC File [C:/vini_dir/vini_snn/vini_snn.srcs/constrs_1/new/vini_snn.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/vini_dir/vini_snn/vini_snn.srcs/constrs_1/new/vini_snn.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_snn_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/top_snn_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.021 . Memory (MB): peak = 1625.145 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:46 ; elapsed = 00:00:47 . Memory (MB): peak = 1625.145 ; gain = 1034.812
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:46 ; elapsed = 00:00:47 . Memory (MB): peak = 1625.145 ; gain = 1034.812
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property IO_BUFFER_TYPE = NONE for clk. (constraint file  c:/vini_dir/vini_snn/vini_snn.gen/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc, line 3).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for clk. (constraint file  c:/vini_dir/vini_snn/vini_snn.gen/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc, line 4).
+Applied set_property KEEP_HIERARCHY = SOFT for u_clk_wiz. (constraint file  auto generated constraint).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:46 ; elapsed = 00:00:47 . Memory (MB): peak = 1625.145 ; gain = 1034.812
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Preparing Guide Design
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-6702] IncrSynth : Design change found in an area of the design that prevents previous synthesis information being used, Reverting to default synthesis
+---------------------------------------------------------------------------------
+Finished Doing Graph Differ : Time (s): cpu = 00:00:50 ; elapsed = 00:00:52 . Memory (MB): peak = 1625.145 ; gain = 1034.812
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Preparing Guide Design : Time (s): cpu = 00:00:50 ; elapsed = 00:00:52 . Memory (MB): peak = 1625.145 ; gain = 1034.812
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'uart_rx'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'uart_tx'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'mac_unit'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'lif_neuron'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'snn_layer'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'mac_unit__parameterized0'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'snn_layer__parameterized0'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'mac_unit__parameterized1'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'snn_layer__parameterized1'
+INFO: [Synth 8-802] inferred FSM for state register 't_state_reg' in module 'snn_core'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'top_snn'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    IDLE |                               00 |                              000
+                RX_START |                               01 |                              001
+                 RX_DATA |                               10 |                              010
+                 RX_STOP |                               11 |                              011
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'uart_rx'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    IDLE |                               00 |                              000
+                   START |                               01 |                              001
+                    DATA |                               10 |                              010
+                    STOP |                               11 |                              011
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'uart_tx'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+              STATE_IDLE |                              000 |                              000
+          STATE_MAC_READ |                              001 |                              001
+          STATE_MAC_WAIT |                              010 |                              010
+         STATE_MAC_ACCUM |                              011 |                              011
+         STATE_BIAS_READ |                              100 |                              100
+         STATE_BIAS_WAIT |                              101 |                              101
+          STATE_BIAS_ADD |                              110 |                              110
+              STATE_DONE |                              111 |                              111
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'mac_unit'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+              STATE_IDLE |                             0001 |                               00
+              STATE_LEAK |                             0010 |                               01
+         STATE_INTEGRATE |                             0100 |                               10
+              STATE_FIRE |                             1000 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'lif_neuron'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+              STATE_IDLE |                          0000001 |                              000
+          STATE_MEM_READ |                          0000010 |                              001
+        STATE_CALC_START |                          0000100 |                              010
+     STATE_CALC_WAIT_MAC |                          0001000 |                              011
+     STATE_CALC_WAIT_LIF |                          0010000 |                              100
+           STATE_CHECK_J |                          0100000 |                              101
+              STATE_DONE |                          1000000 |                              110
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'snn_layer'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+              STATE_IDLE |                              000 |                              000
+          STATE_MAC_READ |                              001 |                              001
+          STATE_MAC_WAIT |                              010 |                              010
+         STATE_MAC_ACCUM |                              011 |                              011
+         STATE_BIAS_READ |                              100 |                              100
+         STATE_BIAS_WAIT |                              101 |                              101
+          STATE_BIAS_ADD |                              110 |                              110
+              STATE_DONE |                              111 |                              111
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'mac_unit__parameterized0'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+              STATE_IDLE |                          0000001 |                              000
+          STATE_MEM_READ |                          0000010 |                              001
+        STATE_CALC_START |                          0000100 |                              010
+     STATE_CALC_WAIT_MAC |                          0001000 |                              011
+     STATE_CALC_WAIT_LIF |                          0010000 |                              100
+           STATE_CHECK_J |                          0100000 |                              101
+              STATE_DONE |                          1000000 |                              110
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'snn_layer__parameterized0'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+              STATE_IDLE |                              000 |                              000
+          STATE_MAC_READ |                              001 |                              001
+          STATE_MAC_WAIT |                              010 |                              010
+         STATE_MAC_ACCUM |                              011 |                              011
+         STATE_BIAS_READ |                              100 |                              100
+         STATE_BIAS_WAIT |                              101 |                              101
+          STATE_BIAS_ADD |                              110 |                              110
+              STATE_DONE |                              111 |                              111
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'mac_unit__parameterized1'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+              STATE_IDLE |                              000 |                              000
+          STATE_MEM_READ |                              001 |                              001
+        STATE_CALC_START |                              010 |                              010
+     STATE_CALC_WAIT_MAC |                              011 |                              011
+     STATE_CALC_WAIT_LIF |                              100 |                              100
+           STATE_CHECK_J |                              101 |                              101
+              STATE_DONE |                              110 |                              110
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'snn_layer__parameterized1'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+            T_STATE_IDLE |                      00000000001 |                             0000
+            T_STATE_INIT |                      00000000010 |                             0001
+        T_STATE_L1_START |                      00000000100 |                             0010
+         T_STATE_L1_WAIT |                      00000001000 |                             0011
+        T_STATE_L2_START |                      00000010000 |                             0100
+         T_STATE_L2_WAIT |                      00000100000 |                             0101
+        T_STATE_L3_START |                      00001000000 |                             0110
+         T_STATE_L3_WAIT |                      00010000000 |                             0111
+           T_STATE_ACCUM |                      00100000000 |                             1000
+         T_STATE_CHECK_T |                      01000000000 |                             1001
+          T_STATE_DECIDE |                      10000000000 |                             1010
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 't_state_reg' using encoding 'one-hot' in module 'snn_core'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                FSM_IDLE |                              000 |                              000
+          FSM_RECEIVE_B1 |                              001 |                              001
+          FSM_RECEIVE_B2 |                              010 |                              010
+          FSM_RECEIVE_B3 |                              011 |                              011
+       FSM_COMPUTE_START |                              100 |                              100
+           FSM_COMPUTING |                              101 |                              101
+         FSM_SEND_RESULT |                              110 |                              110
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'top_snn'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:20 ; elapsed = 00:01:31 . Memory (MB): peak = 1625.145 ; gain = 1034.812
+---------------------------------------------------------------------------------
+
+
+Incremental Synthesis Report Summary:
+
+1. Incremental synthesis run: no
+
+   Reason for not running incremental synthesis : Design change found in an area of the design that prevents previous synthesis information being used
+
+
+INFO: [Synth 8-7130] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   66 Bit       Adders := 3     
+	   2 Input   33 Bit       Adders := 6     
+	   2 Input   32 Bit       Adders := 3     
+	   2 Input   16 Bit       Adders := 2     
+	   2 Input   13 Bit       Adders := 1     
+	   2 Input   12 Bit       Adders := 2     
+	   2 Input    8 Bit       Adders := 4     
+	   2 Input    7 Bit       Adders := 2     
+	   2 Input    3 Bit       Adders := 2     
+	   2 Input    1 Bit       Adders := 2     
++---Registers : 
+	              128 Bit    Registers := 4     
+	               66 Bit    Registers := 3     
+	               33 Bit    Registers := 270   
+	               32 Bit    Registers := 3     
+	               20 Bit    Registers := 3004  
+	               16 Bit    Registers := 3     
+	               13 Bit    Registers := 2     
+	               12 Bit    Registers := 1     
+	               10 Bit    Registers := 1     
+	                9 Bit    Registers := 2     
+	                8 Bit    Registers := 6     
+	                7 Bit    Registers := 3     
+	                4 Bit    Registers := 1     
+	                3 Bit    Registers := 2     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 11    
++---Multipliers : 
+	              17x33  Multipliers := 3     
++---ROMs : 
+	                    ROMs := 4     
++---Muxes : 
+	   2 Input  128 Bit        Muxes := 4     
+	   7 Input  128 Bit        Muxes := 2     
+	   2 Input   33 Bit        Muxes := 4     
+	   4 Input   33 Bit        Muxes := 3     
+	   8 Input   32 Bit        Muxes := 6     
+	   2 Input   20 Bit        Muxes := 1     
+	   7 Input   20 Bit        Muxes := 2     
+	   3 Input   16 Bit        Muxes := 1     
+	  11 Input   16 Bit        Muxes := 2     
+	   8 Input   14 Bit        Muxes := 1     
+	   4 Input   13 Bit        Muxes := 2     
+	  11 Input   12 Bit        Muxes := 1     
+	   8 Input   12 Bit        Muxes := 1     
+	   7 Input   12 Bit        Muxes := 1     
+	   2 Input   12 Bit        Muxes := 1     
+	  11 Input   11 Bit        Muxes := 1     
+	   2 Input   11 Bit        Muxes := 1     
+	   8 Input    8 Bit        Muxes := 4     
+	   2 Input    8 Bit        Muxes := 1     
+	   4 Input    8 Bit        Muxes := 1     
+	   8 Input    7 Bit        Muxes := 2     
+	   7 Input    7 Bit        Muxes := 4     
+	   2 Input    7 Bit        Muxes := 2     
+	   4 Input    4 Bit        Muxes := 3     
+	   2 Input    4 Bit        Muxes := 3     
+	  11 Input    4 Bit        Muxes := 1     
+	   7 Input    4 Bit        Muxes := 1     
+	   2 Input    3 Bit        Muxes := 25    
+	   8 Input    3 Bit        Muxes := 6     
+	   7 Input    3 Bit        Muxes := 4     
+	   4 Input    3 Bit        Muxes := 2     
+	   2 Input    2 Bit        Muxes := 5     
+	   4 Input    2 Bit        Muxes := 8     
+	   7 Input    2 Bit        Muxes := 2     
+	   8 Input    1 Bit        Muxes := 13    
+	   2 Input    1 Bit        Muxes := 267   
+	   4 Input    1 Bit        Muxes := 11    
+	   7 Input    1 Bit        Muxes := 18    
+	  11 Input    1 Bit        Muxes := 4     
+	   3 Input    1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-3886] merging instance 'U_SNN_L2/u_lif/cur_in_reg_reg[32]' (FDCE) to 'U_SNN_L2/u_lif/cur_in_reg_reg[31]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\U_SNN_L3/rom_B/dout_reg[0] )
+INFO: [Synth 8-3886] merging instance 'U_SNN_L3/rom_B/dout_reg[2]' (FD) to 'U_SNN_L3/rom_B/dout_reg[4]'
+INFO: [Synth 8-3886] merging instance 'U_SNN_L3/rom_B/dout_reg[3]' (FD) to 'U_SNN_L3/rom_B/dout_reg[4]'
+INFO: [Synth 8-3886] merging instance 'U_SNN_L3/rom_B/dout_reg[5]' (FD) to 'U_SNN_L3/rom_B/dout_reg[6]'
+INFO: [Synth 8-3886] merging instance 'U_SNN_L3/rom_B/dout_reg[6]' (FD) to 'U_SNN_L3/rom_B/dout_reg[7]'
+INFO: [Synth 8-3886] merging instance 'U_SNN_L3/rom_B/dout_reg[7]' (FD) to 'U_SNN_L3/rom_B/dout_reg[8]'
+INFO: [Synth 8-3886] merging instance 'U_SNN_L3/rom_B/dout_reg[8]' (FD) to 'U_SNN_L3/rom_B/dout_reg[9]'
+INFO: [Synth 8-3886] merging instance 'U_SNN_L3/rom_B/dout_reg[9]' (FD) to 'U_SNN_L3/rom_B/dout_reg[10]'
+INFO: [Synth 8-3886] merging instance 'U_SNN_L3/rom_B/dout_reg[10]' (FD) to 'U_SNN_L3/rom_B/dout_reg[11]'
+INFO: [Synth 8-3886] merging instance 'U_SNN_L3/rom_B/dout_reg[11]' (FD) to 'U_SNN_L3/rom_B/dout_reg[12]'
+INFO: [Synth 8-3886] merging instance 'U_SNN_L3/rom_B/dout_reg[12]' (FD) to 'U_SNN_L3/rom_B/dout_reg[13]'
+INFO: [Synth 8-3886] merging instance 'U_SNN_L3/rom_B/dout_reg[13]' (FD) to 'U_SNN_L3/rom_B/dout_reg[14]'
+INFO: [Synth 8-3886] merging instance 'U_SNN_L3/rom_B/dout_reg[14]' (FD) to 'U_SNN_L3/rom_B/dout_reg[15]'
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\U_SNN_L3/rom_B/dout_reg[15] )
+INFO: [Synth 8-3886] merging instance 'U_SNN_L3/u_lif/cur_in_reg_reg[31]' (FDCE) to 'U_SNN_L3/u_lif/cur_in_reg_reg[32]'
+INFO: [Synth 8-3886] merging instance 'U_SNN_L1/u_lif/cur_in_reg_reg[32]' (FDCE) to 'U_SNN_L1/u_lif/cur_in_reg_reg[31]'
+INFO: [Synth 8-3886] merging instance 'u_uart_tx/data_reg[7]' (FDCE) to 'u_uart_tx/data_reg[5]'
+INFO: [Synth 8-3886] merging instance 'u_uart_tx/data_reg[6]' (FDCE) to 'u_uart_tx/data_reg[1]'
+INFO: [Synth 8-3886] merging instance 'u_uart_tx/data_reg[3]' (FDCE) to 'u_uart_tx/data_reg[1]'
+INFO: [Synth 8-3886] merging instance 'u_uart_tx/data_reg[2]' (FDCE) to 'u_uart_tx/data_reg[1]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\u_uart_tx/data_reg[1] )
+INFO: [Synth 8-3886] merging instance 'u_uart_tx/clk_count_reg[8]' (FDC) to 'u_uart_tx/clk_count_reg[12]'
+INFO: [Synth 8-3886] merging instance 'u_uart_tx/clk_count_reg[9]' (FDC) to 'u_uart_tx/clk_count_reg[12]'
+INFO: [Synth 8-3886] merging instance 'u_uart_tx/clk_count_reg[10]' (FDC) to 'u_uart_tx/clk_count_reg[12]'
+INFO: [Synth 8-3886] merging instance 'u_uart_tx/clk_count_reg[11]' (FDC) to 'u_uart_tx/clk_count_reg[12]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\u_uart_tx/clk_count_reg[12] )
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:02:24 ; elapsed = 00:02:44 . Memory (MB): peak = 1625.145 ; gain = 1034.812
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+ROM: Preliminary Mapping Report
++------------+------------+---------------+----------------+
+|Module Name | RTL Object | Depth x Width | Implemented As | 
++------------+------------+---------------+----------------+
+|generic_rom | mem        | 128x7         | LUT            | 
++------------+------------+---------------+----------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:02:35 ; elapsed = 00:02:56 . Memory (MB): peak = 1748.172 ; gain = 1157.840
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:03:04 ; elapsed = 00:03:27 . Memory (MB): peak = 2047.320 ; gain = 1456.988
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-7052] The timing for the instance uut_snn_corei_7/uut_snn_core/U_SNN_L2/rom_W/dout_reg_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance uut_snn_corei_7/uut_snn_core/U_SNN_L2/rom_W/dout_reg_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance uut_snn_corei_7/uut_snn_core/U_SNN_L2/rom_W/dout_reg_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance uut_snn_corei_7/uut_snn_core/U_SNN_L2/rom_W/dout_reg_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance uut_snn_corei_7/uut_snn_core/U_SNN_L2/rom_W/dout_reg_4 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance uut_snn_corei_7/uut_snn_core/U_SNN_L3/rom_W/dout_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance uut_snn_corei_8/uut_snn_core/U_SNN_L1/rom_W/dout_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance uut_snn_corei_8/uut_snn_core/U_SNN_L1/rom_B/dout_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:03:39 ; elapsed = 00:04:21 . Memory (MB): peak = 2075.664 ; gain = 1485.332
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+INFO: [Synth 8-7052] The timing for the instance uut_snn_core/U_SNN_L2/rom_W/dout_reg_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance uut_snn_core/U_SNN_L2/rom_W/dout_reg_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance uut_snn_core/U_SNN_L2/rom_W/dout_reg_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance uut_snn_core/U_SNN_L2/rom_W/dout_reg_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance uut_snn_core/U_SNN_L2/rom_W/dout_reg_4 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance uut_snn_core/U_SNN_L3/rom_W/dout_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance uut_snn_core/U_SNN_L1/rom_W/dout_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance uut_snn_core/U_SNN_L1/rom_B/dout_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:03:58 ; elapsed = 00:04:40 . Memory (MB): peak = 2123.145 ; gain = 1532.812
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:03:58 ; elapsed = 00:04:41 . Memory (MB): peak = 2123.145 ; gain = 1532.812
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:04:10 ; elapsed = 00:04:53 . Memory (MB): peak = 2143.051 ; gain = 1552.719
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:04:11 ; elapsed = 00:04:54 . Memory (MB): peak = 2143.051 ; gain = 1552.719
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:04:13 ; elapsed = 00:04:56 . Memory (MB): peak = 2158.047 ; gain = 1567.715
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:04:14 ; elapsed = 00:04:57 . Memory (MB): peak = 2158.047 ; gain = 1567.715
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+--------------+----------+
+|      |BlackBox name |Instances |
++------+--------------+----------+
+|1     |clk_wiz_0     |         1|
++------+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |clk_wiz  |     1|
+|2     |CARRY4   |   312|
+|3     |LUT1     |   149|
+|4     |LUT2     |  1326|
+|5     |LUT3     |   558|
+|6     |LUT4     |   533|
+|7     |LUT5     |  2837|
+|8     |LUT6     | 19530|
+|9     |MUXF7    |  9124|
+|10    |MUXF8    |  4444|
+|11    |RAMB18E1 |     2|
+|13    |RAMB36E1 |     6|
+|19    |FDCE     |  1428|
+|20    |FDPE     |     8|
+|21    |FDRE     | 69564|
+|22    |IBUF     |     2|
+|23    |OBUF     |     5|
++------+---------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:04:14 ; elapsed = 00:04:57 . Memory (MB): peak = 2158.047 ; gain = 1567.715
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:03:45 ; elapsed = 00:04:44 . Memory (MB): peak = 2158.047 ; gain = 1394.734
+Synthesis Optimization Complete : Time (s): cpu = 00:04:14 ; elapsed = 00:04:58 . Memory (MB): peak = 2158.047 ; gain = 1567.715
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2181.801 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 13888 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.048 . Memory (MB): peak = 2213.324 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: 457862b1
+INFO: [Common 17-83] Releasing license: Synthesis
+131 Infos, 101 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:04:39 ; elapsed = 00:05:26 . Memory (MB): peak = 2213.324 ; gain = 1827.914
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.194 . Memory (MB): peak = 2213.324 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/vini_dir/vini_snn/vini_snn.runs/synth_1/top_snn.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:13 ; elapsed = 00:00:12 . Memory (MB): peak = 2213.324 ; gain = 0.000
+INFO: [Vivado 12-24828] Executing command : report_utilization -file top_snn_utilization_synth.rpt -pb top_snn_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Mon Dec  1 12:32:20 2025...

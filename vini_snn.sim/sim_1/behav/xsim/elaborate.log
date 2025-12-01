@@ -1,0 +1,36 @@
+Vivado Simulator v2024.2.0
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2024.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_snn_debug_behav xil_defaultlib.tb_snn_debug xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module unisims_ver.IBUF
+Compiling module unisims_ver.MMCME2_ADV(CLKFBOUT_MULT_F=10.0,...
+Compiling module unisims_ver.BUFG
+Compiling module xil_defaultlib.clk_wiz_0_clk_wiz
+Compiling module xil_defaultlib.clk_wiz_0
+Compiling module xil_defaultlib.uart_rx_default
+Compiling module xil_defaultlib.uart_tx_default
+Compiling module xil_defaultlib.generic_rom(ADDR_WIDTH=12)
+Compiling module xil_defaultlib.generic_rom(ADDR_WIDTH=7,INIT_FI...
+Compiling module xil_defaultlib.mac_unit
+Compiling module xil_defaultlib.lif_neuron(THRESHOLD_Q5_11=16'sb...
+Compiling module xil_defaultlib.snn_layer
+Compiling module xil_defaultlib.generic_rom(ADDR_WIDTH=14,INIT_F...
+Compiling module xil_defaultlib.generic_rom(ADDR_WIDTH=7,INIT_FI...
+Compiling module xil_defaultlib.mac_unit(INPUT_DIM=128,W_ADDR_WI...
+Compiling module xil_defaultlib.snn_layer(INPUT_DIM=128,W_ADDR_W...
+Compiling module xil_defaultlib.generic_rom(ADDR_WIDTH=8,INIT_FI...
+Compiling module xil_defaultlib.generic_rom(ADDR_WIDTH=1,INIT_FI...
+Compiling module xil_defaultlib.mac_unit(INPUT_DIM=128,J_WIDTH=1...
+Compiling module xil_defaultlib.snn_layer(INPUT_DIM=128,NUM_NEUR...
+Compiling module xil_defaultlib.snn_core
+Compiling module xil_defaultlib.top_snn
+Compiling module xil_defaultlib.tb_snn_debug
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_snn_debug_behav
